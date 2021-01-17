@@ -4,7 +4,7 @@ const express = require('express')
 const socketio = require('socket.io')
 
 const app = express()
-const server = http.createServer(app)// Express does it automatically behindthe scenes, but i needed the 'server' variable
+const server = http.createServer(app)// Express does it automatically behind the scenes, but i needed the 'server' variable
 const io = socketio(server) //  Thats why..
 
 const port = process.env.PORT || 3000
