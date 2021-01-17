@@ -12,11 +12,28 @@ const publcDirectoryPath = path.join(__dirname, '../public')
 
 app.use(express.static(publcDirectoryPath))
 
-    io.on('connection', () => {
+let count = 0
+
+    io.on('connection', (socket) => {
         console.log('New Websocket connections')
+        
+        socket.emit('message', 'Welcome!')// emits to current client
+        socket.broadcast.emit('message', 'A new user has joined!') // emits to everyone but the current client
+
+
+        socket.on('sendMessage', (message) => {
+            io.emit('message', message) // emits to every single client
+        })
+
+        socket.on('disconnect', () => {
+            io.emit('message', 'A user has left the chat!')
+        })
+        
     })
 
 server.listen(port, () => {
     console.log(`Server is up on port ${port}!`)
 })
+
+
 
