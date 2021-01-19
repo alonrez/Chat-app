@@ -1,6 +1,7 @@
 const socket = io()
 
 
+
 // Elements
 const $messageForm = document.querySelector('#message-form')
 const $messageFormInput = $messageForm.querySelector('input')
@@ -22,7 +23,7 @@ const autoScroll = () => {
     // In order for the autoscroll to be disable while manualy scrolling up 
     // which is a little nicer UX. i've added the code below.
 
-    
+
    // New message element
    const $newMessage = $messages.lastElementChild
    
