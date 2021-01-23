@@ -15,7 +15,13 @@
                 <label>Display name</label>
                 <input type="text" name="username" placeholder="Display name" required autocomplete="off">
                 <label>Room</label>
-                <input type="text" name="room" placeholder="e.g. Public" required>
+                <input list="options" type="text" name="room" placeholder="e.g. Tel-Aviv" required autocomplete="off">
+                <datalist id="options">
+                    <option value="Tel-Aviv"></option>
+                    <option value="Binyamina"></option>
+                    <option value="Mt. Hermon"></option>
+                    <option value="Eilat"></option>
+                </datalist>
                 <button>Join</button>
             </form>
         </div>
