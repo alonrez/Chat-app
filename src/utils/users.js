@@ -1,6 +1,7 @@
+const msg = require('./msg')
 const users = []
 
-
+const msg = ' Please include missing data.'
 
 const addUser = ({ id, username, room }) => {
     // Clean the data 
@@ -10,7 +11,7 @@ const addUser = ({ id, username, room }) => {
     // Validate the data
     if (!username || !room) {
         return {
-            error: 'Username and room are required!'
+            error: `Username and room are required! ${msg}`
         }
     }
 
