@@ -1,7 +1,6 @@
 const users = []
 
-
-
+const msg = "123"
 const addUser = ({ id, username, room }) => {
     // Clean the data 
     username = username.trim().toLowerCase()
@@ -10,7 +9,7 @@ const addUser = ({ id, username, room }) => {
     // Validate the data
     if (!username || !room) {
         return {
-            error: 'Username and room are required!'
+            error: `Username and room are required! ${msg}`
         }
     }
 
