@@ -1,4 +1,4 @@
-const msg = require('./msg')
+const {msg} = require('./msg')
 const users = []
 
 const msg = ' Please include missing data.'
